@@ -1,0 +1,31 @@
+### Listar
+GET http://localhost:8080/pratos
+Accept: application/json
+
+### Cadastrar
+POST http://localhost:8080/pratos
+Content-Type: application/json
+Accept: application/json
+
+{"nome": "Lasanha", "descricao": "Massa com molho e queijo", "preco": 35.0}
+
+### Buscar por ID
+GET http://localhost:8080/pratos/1
+
+### Filtrar
+GET http://localhost:8080/pratos?nome=lasan
+
+### Atualizar (todos os campos)
+PUT http://localhost:8080/pratos/1
+Content-Type: application/json
+
+{"nome": "Lasanha Atualizado", "descricao": "Massa com molho e queijo", "preco": 35.0}
+
+### Excluir
+DELETE http://localhost:8080/pratos/1
+
+### Inválido: 400
+POST http://localhost:8080/pratos
+Content-Type: application/json
+
+{}
